@@ -23,3 +23,11 @@ If extension `Clangd` and `CMake Tools` has been installed, they should be worki
 
 In VSCode's `Git Bash` terminal type 
 `./f.sh`, and then `.elf` will be generated under `\build\debug`, then `Openocd` will flash it to STM32 if the corresponding hardware($e.g.$ `ST-LINK` or `DAPLINK`) is correctly connected to the device.
+
+# 3. C++ Support
+
+In `System.i4N` or whatever it's named after, there are two files specifically designed for `C++`, `cppmain.cpp` and `cppmain.h`.
+
+To enable `C++`, simply include `cppmain.h` in `\Core\Src\main.c` and call function `cppmain()` in function `main()` of `\Core\Src\main.c`, however ot should be called outside the while(1) loop to avoid dual infinite loop, which can cause serious errors.
+
+After that, you can write your codes in `cppmain.c` instead of `main.c`, as all logics will ultimately be call in `main.c`.
