@@ -31,3 +31,5 @@ In `System.i4N` or whatever it's named after, there are two files specifically d
 To enable `C++`, simply include `cppmain.h` in `\Core\Src\main.c` and call function `cppmain()` in function `main()` of `\Core\Src\main.c`, however it should be called outside the while(1) loop to avoid dual infinite loop, which can cause serious errors.
 
 After that, you can write your codes in `cppmain.c` instead of `main.c`, as all logics will ultimately be call in `main.c`.
+
+For unknown reasons `c++` header files should have `.hpp` suffix instead of `.h` (which I always use) or `clangd` might fail to function properly.
