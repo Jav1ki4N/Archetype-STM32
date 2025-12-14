@@ -13,7 +13,11 @@ For now it's only verified under my current STM32 project structure, which is:
 
 # 2. How to use?
 
-`git clone` the contents of this folder to a just-genrated `STM32CubeMX` project.
+`git clone` the contents of this folder to a just-generated `STM32CubeMX` project.
+
+Replace `STM32CubeMX` generated `CMakelists.txt` under root directory with `CMakelists.txt` in `\CMake_Portable`.
+
+Edit `settings.json` in `\.vscode` to match your paths of tools.
 
 If extension `Clangd` and `CMake Tools` has been installed, they should be working fine with `settings.json` containing the right paths of each tool. It's recommended to use `MSYS2` to install and manage the toolchain.
 
